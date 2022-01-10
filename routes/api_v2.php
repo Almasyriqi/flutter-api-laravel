@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\CategoryControllerV2;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -15,4 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('categories', [CategoryController::class, 'index_v2']);
+Route::get('categoriesv2', [CategoryController::class, 'index_v2']);
+
+Route::apiResource('categories', CategoryControllerV2::class);
